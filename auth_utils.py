@@ -14,7 +14,7 @@ class AuthJwtCsrf():
     def generate_hashed_pw(self, password) -> str:
         return self.pwd_ctx.hash(password)
 
-    def very_pw(self, plain_pw, hashed_pw) -> bool:
+    def verify_pw(self, plain_pw, hashed_pw) -> bool:
         return self.pwd_ctx.verify(plain_pw, hashed_pw)
 
     def encode_jwt(self, email) -> str:
