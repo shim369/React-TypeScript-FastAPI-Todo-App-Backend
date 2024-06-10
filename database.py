@@ -16,6 +16,7 @@ def todo_serializer(todo) -> dict:
     return {
         "id": str(todo["_id"]),
         "title": todo["title"],
+        "detail": todo["detail"],
         "url": todo["url"],
         "deadline": todo["deadline"]
     }

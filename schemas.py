@@ -6,11 +6,13 @@ from datetime import date
 class Todo(BaseModel):
     id: str
     title: str
+    detail: str
     url: str
     deadline: date
 
 class TodoBody(BaseModel):
     title: str
+    detail: str
     url: str
     deadline: date
 
