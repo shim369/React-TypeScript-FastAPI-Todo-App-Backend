@@ -1,24 +1,18 @@
 from pydantic import BaseModel
 from typing import Optional
 from decouple import config
-
+from datetime import date
 
 class Todo(BaseModel):
     id: str
     title: str
-    description: str
+    url: str
+    deadline: date
 
 class TodoBody(BaseModel):
     title: str
-    description: str
+    url: str
+    deadline: date
 
 class SuccessMsg(BaseModel):
     message: str
-
-class UserBody(BaseModel):
-    email: str
-    password: str
-
-class UserInfo(BaseModel):
-    id: Optional[str] = None
-    email: str
